@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """import string
-print(string.ascii_lowercase)"""
+print(string.ascii_lowercase)
 
-"""import string
+import string
 v = string.ascii_lowercase
 print('{}'.format(v))"""
 
