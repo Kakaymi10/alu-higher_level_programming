@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import random
+"""import random
 number = random.randint(-10000, 10000)
 last = str(repr(number)[-1])
 number1 = int(last)
@@ -19,10 +19,10 @@ else:
     number1 = " and is less than 6 and not 0"
 
 
-print("Last digit of "+ str(number) + " is " + last + number1)
+print("Last digit of "+ str(number) + " is " + last + number1)"""
 
 
-"""import random
+import random
 number = random.randint(-10000, 10000)
 
 if number < 0:
@@ -38,4 +38,4 @@ elif remainder is 0:
           .format(number, remainder))
 else:
     print("Last digit of {} is {} and is less than 6 and not 0"
-          .format(number, remainder))"""
+          .format(number, remainder))
