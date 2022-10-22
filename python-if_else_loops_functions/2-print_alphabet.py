@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+for c in range(ord('a'), ord('z')+1):
+    print('{}'.format(chr(c)), end='')
+
 #import string
 #print(string.ascii_lowercase)
 
@@ -6,5 +9,4 @@
 #v = string.ascii_lowercase
 #print('{}'.format(v))"""
 
-for c in range(ord('a'), ord('z')+1):
-    print('{}'.format(chr(c)), end='')
+
