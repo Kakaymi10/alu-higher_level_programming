@@ -3,4 +3,4 @@
     length = len(sentence)
     char = sentence[0] if length > 0 else None
 
-    retuen (length, char)
+    return (length, char)
