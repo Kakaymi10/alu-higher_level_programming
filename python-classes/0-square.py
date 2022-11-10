@@ -1,8 +1,7 @@
-#!/usr/bin/python3
 """Module 0-squre and defines class Square."""
-
+#!/usr/bin/python3
 
 
 class Square():
-"""Empty class."""
+    """Empty class."""
     pass
