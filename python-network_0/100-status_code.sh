@@ -1,6 +1,3 @@
 #!/bin/bash
-# Take in URL, display status code only; Usage: ./100-status_code.sh 0.0.0.0:5000/nop ; echo ""
-curl -o /dev/null -w 
-%
-http_code
- -sLI "$1"
+# A Bash script that sends a request to a url passed as an argument,and displays only the status code of the response
+curl -so /dev/null --write-out "%{http_code}" "$1"
