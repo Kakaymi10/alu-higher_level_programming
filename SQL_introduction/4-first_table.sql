@@ -1,6 +1,3 @@
--- Create a table in the current database.
+-- create table; shouldn't fail if already exists
 
-CREATE TABLE IF NOT EXISTS first_table(
-	id=INT,
-	name=VARCHAR(256)
-);
+CREATE TABLE IF NOT EXISTS first_table (id INT, name VARCHAR(256));
