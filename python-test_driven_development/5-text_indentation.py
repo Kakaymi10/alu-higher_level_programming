@@ -3,7 +3,7 @@
 
 
 def text_indentation(text):
-    "Raise exceptions"
+    """Raise exceptions"""
     if not isinstance(text, str):
         raise TypeError("text must be a string")  
     for char in ".?:":
