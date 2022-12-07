@@ -35,9 +35,16 @@ class TestBase(unittest.TestCase):
         print("TEARDOWN called...")
 
     """Test functions for the 2nd task"""
-    def test_base_1_id(self):
-        self.assertTrue(Base(89), self.id == 89)
+    """Test attributes"""
+    def test_id_given(self):
+        """Test ids match when given"""
+        self.assertTrue(Base(999), self.id == 999)
         self.assertTrue(Base(0), self.id == 0)
+        self.assertTrue(Base(1), self.id == 1)
+        self.assertTrue(Base(-80), self.id == -80)
+
+    def test_id_not_given(self):
+        """Test ids match incremented nb_objects when not given"""
         self.assertTrue(Base(), self.id == 1)
         self.assertTrue(Base(), self.id == 2)
         
