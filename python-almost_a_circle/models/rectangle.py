@@ -4,14 +4,7 @@ Module contains class Rectangle
 Inherits from Base;
 Inits superclass' id
 Contains private width, height, x, y
-Contains public method area
-Displays rectangle using "#"'s
-Prints [Rectangle] (<id>) <x>/<y> - <width>/<height>
-Updates attributes: arg1=id, arg2=width, arg3=height, arg4=x, arg5=y
-Returns dictionary representation of attributes
 """
-
-
 from base import Base
 
 
