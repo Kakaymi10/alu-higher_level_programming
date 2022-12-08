@@ -74,7 +74,7 @@ class Rectangle(Base):
     def y(self, value):
          """Beg of task3 validte attributes"""
          if type(value) is not (int):
-             raise TypeError("height must be an integer")
+             raise TypeError("y must be an integer")
          if value < 0:
              raise ValueError("y must be >= 0")
          """End of task 3"""
