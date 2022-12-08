@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""
-Module contains class Rectangle
+"""Module contains class Rectangle
 Inherits from Base;
 Inits superclass' id
 Contains private width, height"""
@@ -9,7 +8,6 @@ from models.base import Base
 
 class Rectangle(Base):
     '''A Rectangle class.'''
-
 
     def __init__(self, width, height, x=0, y=0, id=None):
         '''Constructor.'''
@@ -78,3 +76,8 @@ class Rectangle(Base):
              raise ValueError("y must be >= 0")
          """End of task 3"""
          self.__y = value
+
+    """task 4 Area first"""
+    def area(self):
+        """returning the area of the rectangle"""
+        return self.width * self.height
