@@ -4,13 +4,12 @@ Module contains class Rectangle
 Inherits from Base;
 Inits superclass' id
 Contains private width, height"""
-
-
 from models.base import Base
 
 
 class Rectangle(Base):
     '''A Rectangle class.'''
+
 
     def __init__(self, width, height, x=0, y=0, id=None):
         '''Constructor.'''
