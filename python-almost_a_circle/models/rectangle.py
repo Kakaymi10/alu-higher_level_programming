@@ -3,7 +3,7 @@
 Inherits from Base;
 Inits superclass' id
 Contains private width, height"""
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
