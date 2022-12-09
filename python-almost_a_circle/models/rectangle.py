@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-"""Module contains class Rectangle
-Inherits from Base;
-Inits superclass' id
-Contains private width, height"""
+"""Module contains class Rectangle"""
 from models.base import Base
 
 
@@ -93,31 +90,28 @@ class Rectangle(Base):
         """Prints [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
         return "[" + self.__class__.__name__ + "] " + "(" + str(self.id) + ") " + str(self.__x) + "/" + str(self.__y) + " - " + str(self.__width) + "/" + str(self.__height)
 
+    def __update(self, id=None, width=None, height=None, x=None, y=None):
+        '''Internal method that updates instance attributes via */**args.'''
+        if id is not None:
+            self.id = id
+        if width is not None:
+            self.width = width
+        if height is not None:
+            self.height = height
+        if x is not None:
+            self.x = x
+        if y is not None:
+            self.y = y
+
     def update(self, *args, **kwargs):
-        """
-        If args: set attributes in this order: id, width, height, x, y
-        If no args given: set attributes according to kwargs
-        """
+        '''Updates instance attributes via no-keyword & keyword args.'''
+        # print(args, kwargs)
         if args:
-            for k, v in enumerate(args):
-                if k == 0:
-                    self.id = v
-                elif k == 1:
-                    self.width = v
-                elif k == 2:
-                    self.height = v
-                elif k == 3:
-                    self.x = v
-                else:
-                    self.y = v
-        else:
-            if "id" in kwargs:
-                self.id = kwargs["id"]
-            if "width" in kwargs:
-                self.width = kwargs["width"]
-            if "height" in kwargs:
-                self.height = kwargs["height"]
-            if "x" in kwargs:
-                self.x = kwargs["x"]
-            if "y" in kwargs:
-                self.y = kwargs["y"]
+            self.__update(*args)
+        elif kwargs:
+            self.__update(**kwargs)
+
+    def to_dictionary(self):
+        '''Returns dictionary representation of this class.'''
+        return {"id": self.id, "width": self.__width, "height": self.__height,
+                "x": self.__x, "y": self.__y}
