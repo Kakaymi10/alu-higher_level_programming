@@ -3,7 +3,7 @@
 Inherits from Base;
 Inits superclass' id
 Contains private width, height"""
-from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -88,3 +88,7 @@ class Rectangle(Base):
         print("\n" * self.__y +
               "\n".join(" " * self.__x + "#" * self.__width
                         for i in range(self.__height)))
+
+    def __str__(self):
+        """Prints [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
+        return "[" + self.__class__.__name__ + " " + "(" + str(self.id) + ") " + str(self.__x) + "/" + str(self.__y) + "-" + str(self.__width) + "/" + str(self.__height)
