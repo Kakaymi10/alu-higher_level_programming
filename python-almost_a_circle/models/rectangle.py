@@ -91,4 +91,4 @@ class Rectangle(Base):
 
     def __str__(self):
         """Prints [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
-        return "[" + self.__class__.__name__ + " " + "(" + str(self.id) + ") " + str(self.__x) + "/" + str(self.__y) + "-" + str(self.__width) + "/" + str(self.__height)
+        return "[" + self.__class__.__name__ + "] " + "(" + str(self.id) + ") " + str(self.__x) + "/" + str(self.__y) + " - " + str(self.__width) + "/" + str(self.__height)
