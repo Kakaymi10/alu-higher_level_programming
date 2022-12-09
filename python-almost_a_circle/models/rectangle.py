@@ -3,7 +3,7 @@
 Inherits from Base;
 Inits superclass' id
 Contains private width, height"""
-from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -81,3 +81,10 @@ class Rectangle(Base):
     def area(self):
         """returning the area of the rectangle"""
         return self.width * self.height
+
+    """task 5"""
+    def display(self):
+        """return #"""
+        print("\n" * self.__y +
+              "\n".join(" " * self.__x + "#" * self.__width
+                        for i in range(self.__height)))
