@@ -3,7 +3,7 @@
 Inherits from Base;
 Inits superclass' id
 Contains private width, height"""
-from  models.base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -93,7 +93,7 @@ class Rectangle(Base):
         """Prints [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
         return "[" + self.__class__.__name__ + "] " + "(" + str(self.id) + ") " + str(self.__x) + "/" + str(self.__y) + " - " + str(self.__width) + "/" + str(self.__height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         If args: set attributes in this order: id, width, height, x, y
         If no args given: set attributes according to kwargs
@@ -110,3 +110,14 @@ class Rectangle(Base):
                     self.x = v
                 else:
                     self.y = v
+        else:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "width" in kwargs:
+                self.width = kwargs["width"]
+            if "height" in kwargs:
+                self.height = kwargs["height"]
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            if "y" in kwargs:
+                self.y = kwargs["y"]
