@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Test cases for Base"""
 
+import sys
 import os
 import unittest
 
