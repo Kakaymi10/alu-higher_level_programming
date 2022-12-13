@@ -71,7 +71,7 @@ class Base:
         except:
             return []
 
-     @classmethod
+    @classmethod
     def save_to_file_csv(cls, list_objs):
         '''Saves object to csv file.'''
         from models.rectangle import Rectangle
@@ -88,7 +88,7 @@ class Base:
             writer = csv.writer(f)
             writer.writerows(list_objs)
 
-     @classmethod
+    @classmethod
     def load_from_file_csv(cls):
         '''Loads object to csv file.'''
         from models.rectangle import Rectangle
@@ -108,7 +108,7 @@ class Base:
                 ret.append(cls.create(**d))
         return ret
 
-     @staticmethod
+    @staticmethod
     def draw(list_rectangles, list_squares):
         import turtle
         import time
