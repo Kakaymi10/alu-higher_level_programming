@@ -14,9 +14,6 @@ class Test_Base(unittest.TestCase):
 
     def test_basic(self):
         """Doc"""
-        base = Base()
-        base_1 = Base()
-        base_89 = Base(89)
         self.assertEqual(Base(), 1)
         self.assertEqual(Base(), 2)
         self.assertEqual(Base(89), 89)
