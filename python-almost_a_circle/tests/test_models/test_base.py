@@ -9,7 +9,7 @@ from models.rectangle import Rectangle
 from models.square import Square
 
 
-class TestBase(unittest.TestCase):
+class Test_Base(unittest.TestCase):
     """Test class for Base"""
 
     def test_basic(self):
@@ -17,9 +17,9 @@ class TestBase(unittest.TestCase):
         base = Base()
         base_1 = Base()
         base_89 = Base(89)
-        self.assertEqual(base.id, 1)
-        self.assertEqual(base_1.id, 2)
-        self.assertEqual(base_89.id, 89)
+        self.assertEqual(Base(), 1)
+        self.assertEqual(Base(), 2)
+        self.assertEqual(Base(89), 89)
 
     def test_to_json_string(self):
         """Doc"""
