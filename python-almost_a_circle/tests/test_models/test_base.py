@@ -26,14 +26,14 @@ class TestBase(unittest.TestCase):
         b7 = Base()
         b8 = Base(None)
 
-        self.assertEqual(b1.id, 1)
-        self.assertEqual(b2.id, 2)
-        self.assertEqual(b3.id, 3)
-        self.assertEqual(b4.id, 12)
-        self.assertEqual(b5.id, -5)
-        self.assertEqual(b6.id, 6.3)
-        self.assertEqual(b7.id, 4)
-        self.assertEqual(b8.id, 5)
+        self.assertEqual(Base(), 1)
+        self.assertEqual(Base(), 2)
+        self.assertEqual(Base(), 3)
+        self.assertEqual(Base(12), 12)
+        self.assertEqual(Base(18), 18)
+        self.assertEqual(Base(6), 6)
+        self.assertEqual(Base(), 4)
+        self.assertEqual(Base(None), 5)
 
         
 if __name__ == '__main__':
