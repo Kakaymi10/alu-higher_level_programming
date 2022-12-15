@@ -7,12 +7,9 @@ Unittest for Base Class
 
 import unittest
 import pep8
-import json
 import os
 from models import base
-from models import rectangle
 Base = base.Base
-Rectangle = rectangle.Rectangle
 
 
 class TestPep8(unittest.TestCase):
