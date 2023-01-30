@@ -6,4 +6,4 @@ function firstArgument () {
     console.log('No argument');
   }
 }
-firstArgument ();
+firstArgument();
