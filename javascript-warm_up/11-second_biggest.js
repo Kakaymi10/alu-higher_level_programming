@@ -1,16 +1,15 @@
 #!/usr/bin/node
-function findSecondLargestElem(){
-  let arr = process.argv;
+function findSecondLargestElem () {
+  const arr = process.argv;
   if (arr.length > 3) {
-    let arr = arr.slice(2);
-    let first = -1 , second = -1;
+    arr.slice(2);
+    let first = -1; let second = -1;
 
-    for(let i = 0; i <= arr.length-1; i++){
-      if(arr[i] > first){
+    for (let i = 0; i <= arr.length - 1; i++) {
+      if (arr[i] > first) {
         second = first;
         first = arr[i];
-      }
-      else if( arr[i] > second && arr[i] != first){
+      } else if (arr[i] > second && arr[i] !== first) {
         second = arr[i];
       }
     }
