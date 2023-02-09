@@ -1,5 +1,8 @@
 #!/usr/bin/node
+// Import an array and compute a new array
+
 const list = require('./100-data').list;
+
+const newList = list.map((element, index) => element * index);
 console.log(list);
-let map1 = list.map(x => x * list.indexOf(x));
-console.log(map1);
+console.log(newList);
